@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIKETBHAI PANARA | B.Tech Turing Enigma Portfolio</title>
+  <meta name="description" content="Personal portfolio of ANIKETBHAI PANARA - B.Tech 1st Year, TURING ENIGMA batch. Featuring an interactive anti-gravity physics simulation and upcoming coding projects.">
+  <meta name="keywords" content="Aniketbhai Panara, Turing Enigma, B.Tech, Computer Science, Portfolio, Anti-gravity, WebGL, AI, Systems">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-cyber-neon">
+
+  <!-- Background Anti-Gravity Simulation Canvas -->
+  <canvas id="anti-gravity-canvas"></canvas>
+
+  <!-- Ambient Cyber Overlays -->
+  <div class="cyber-scanlines"></div>
+  <div class="cyber-vignette"></div>
+  <div class="cyber-grid-plane"></div>
+
+  <!-- Main Navigation Bar -->
+  <header class="cyber-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">AP</span>
+        <div class="brand-meta">
+          <span class="brand-name">ANIKETBHAI PANARA</span>
+          <span class="brand-batch">// TURING ENIGMA BATCH</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active" data-sound="hover"><span>01</span> PROFILE</a>
+        <a href="#projects" class="nav-link" data-sound="hover"><span>02</span> PROJECTS</a>
+        <a href="#skills" class="nav-link" data-sound="hover"><span>03</span> CODEX</a>
+        <a href="#terminal-section" class="nav-link" data-sound="hover"><span>04</span> CONSOLE</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio Synthesizer Toggle -->
+        <button id="audio-toggle-btn" class="nav-action-btn" title="Toggle Procedural Cyber Audio" data-sound="click">
+          <span class="audio-icon">🔇</span>
+          <span class="audio-text">SFX OFF</span>
+        </button>
+
+        <!-- GitHub Top Link -->
+        <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="nav-action-btn github-quick-btn" title="Visit GitHub Profile" data-sound="hover">
+          <svg class="nav-svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span class="desktop-only">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="page-content">
+
+    <!-- HERO SECTION WITH CENTER GLASSMORPHIC CARD -->
+    <section id="hero" class="hero-section">
+      <div class="card-tilt-container" id="tilt-wrapper">
+        <div class="glass-hero-card" id="glass-card">
+          <!-- Glass Card Ambient Corner Brackets -->
+          <div class="card-bracket bracket-tl"></div>
+          <div class="card-bracket bracket-tr"></div>
+          <div class="card-bracket bracket-bl"></div>
+          <div class="card-bracket bracket-br"></div>
+          <div class="card-glow-overlay"></div>
+
+          <!-- Top Status Strip -->
+          <div class="card-status-strip">
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span class="status-text">ZERO-G STATUS: OPERATIONAL</span>
+            </div>
+            <div class="batch-badge-pill">
+              <span class="pulse-spark">⚡</span>
+              <span>TURING ENIGMA BATCH</span>
+            </div>
+          </div>
+
+          <!-- Avatar / Hologram Orb -->
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-ring-outer"></div>
+            <div class="avatar-ring-middle"></div>
+            <div class="avatar-core">
+              <span class="avatar-text">AP</span>
+            </div>
+            <div class="avatar-scan-bar"></div>
+          </div>
+
+          <!-- Name & Identity -->
+          <div class="hero-headings">
+            <div class="hero-tag">B.TECH 1ST YEAR COMPUTER SCIENCE & ENGINEERING</div>
+            <h1 class="hero-name" data-text="ANIKETBHAI PANARA">ANIKETBHAI PANARA</h1>
+            <p class="hero-tagline">
+              Pioneering deep systems architecture, quantum zero-gravity physics simulations, and intelligent autonomous agents.
+            </p>
+          </div>
+
+          <!-- Spec Badges Row -->
+          <div class="specs-grid">
+            <div class="spec-card">
+              <span class="spec-label">COGNITION</span>
+              <span class="spec-val">AI & Deep Learning</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">CORE</span>
+              <span class="spec-val">Systems & C/C++</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">SYNTHESIS</span>
+              <span class="spec-val">Zero-G Graphics</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">COHORT</span>
+              <span class="spec-val">Turing Enigma</span>
+            </div>
+          </div>
+
+          <!-- Interactive Action Buttons -->
+          <div class="hero-action-row">
+            <!-- Modern GitHub Profile Button -->
+            <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary" id="github-main-btn" data-sound="click">
+              <span class="btn-glow-border"></span>
+              <span class="btn-inner">
+                <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span class="btn-text">EXPLORE GITHUB PROFILE</span>
+                <span class="btn-arrow">↗</span>
+              </span>
+            </a>
+
+            <!-- Explore Projects Button -->
+            <a href="#projects" class="cyber-btn cyber-btn-secondary" data-sound="hover">
+              <span class="btn-inner">
+                <span class="btn-text">UPCOMING PROJECTS</span>
+                <span class="btn-arrow">↓</span>
+              </span>
+            </a>
+
+            <!-- Gravitational Shockwave Burst Trigger -->
+            <button class="cyber-btn cyber-btn-accent" id="shockwave-btn" title="Deploy Physics Shockwave" data-sound="click">
+              <span class="btn-inner">
+                <span class="btn-icon">⚡</span>
+                <span class="btn-text">ZERO-G BURST</span>
+              </span>
+            </button>
+          </div>
+
+          <!-- Bottom Micro Details -->
+          <div class="card-footer-info">
+            <span class="coord-pill">LAT: 22.3039° N / LON: 70.8022° E</span>
+            <span class="interactive-hint">💡 Hover & drag cursor to bend zero-gravity particle field</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING CODING PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge">// LAB EXPERIMENTS & INVENTIONS</div>
+          <h2 class="section-title">UPCOMING CODING PROJECTS</h2>
+          <p class="section-desc">
+            Architected by Aniketbhai Panara — focused on high-throughput distributed systems, neural networks, and interactive physics simulations.
+          </p>
+
+          <!-- Project Category Filter Pills -->
+          <div class="filter-bar">
+            <button class="filter-pill active" data-filter="all" data-sound="click">ALL PROTOCOLS (6)</button>
+            <button class="filter-pill" data-filter="ai" data-sound="click">AI & NEURAL</button>
+            <button class="filter-pill" data-filter="systems" data-sound="click">SYSTEMS & KERNEL</button>
+            <button class="filter-pill" data-filter="sim" data-sound="click">ZERO-G & PHYSICS</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+          
+          <!-- PROJECT 1: AEGIS NEURAL SENTINEL -->
+          <article class="project-card" data-category="ai" data-id="aegis">
+            <div class="card-glass-glow"></div>
+            <div class="project-header">
+              <span class="project-tag">ARTIFICIAL INTELLIGENCE</span>
+              <span class="project-status status-dev">● DEV 82%</span>
+            </div>
+            <div class="project-icon-box">🛡️</div>
+            <h3 class="project-title">AEGIS AI SENTINEL</h3>
+            <p class="project-summary">
+              Autonomous neural security monitor that intercepts network packets in real-time, executing predictive vector embeddings to neutralize zero-day vulnerabilities.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">PyTorch</span>
+              <span class="tech-chip">Rust</span>
+              <span class="tech-chip">Kafka</span>
+            </div>
+            <div class="project-progress-wrapper">
+              <div class="progress-meta">
+                <span>Compilation Stage</span>
+                <span>82%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="view-blueprint-btn" data-project="aegis" data-sound="click">
+                <span>INSPECT BLUEPRINT</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="proj-git-link" title="Source Repo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: CHRONOS ZERO-G SIMULATOR -->
+          <article class="project-card" data-category="sim" data-id="chronos">
+            <div class="card-glass-glow"></div>
+            <div class="project-header">
+              <span class="project-tag">ZERO-G PHYSICS</span>
+              <span class="project-status status-alpha">● ALPHA 65%</span>
+            </div>
+            <div class="project-icon-box">🌌</div>
+            <h3 class="project-title">CHRONOS ZERO-G ENGINE</h3>
+            <p class="project-summary">
+              Massively parallel WebAssembly N-body gravitational simulator capable of calculating relativistic trajectory bends for 50,000+ cosmic stellar particles.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">C++</span>
+              <span class="tech-chip">WASM</span>
+              <span class="tech-chip">WebGL 2.0</span>
+              <span class="tech-chip">GLSL</span>
+            </div>
+            <div class="project-progress-wrapper">
+              <div class="progress-meta">
+                <span>Kernel Implementation</span>
+                <span>65%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 65%;"></div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="view-blueprint-btn" data-project="chronos" data-sound="click">
+                <span>INSPECT BLUEPRINT</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="proj-git-link" title="Source Repo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: ENIGMA MICROKERNEL -->
+          <article class="project-card" data-category="systems" data-id="enigma-os">
+            <div class="card-glass-glow"></div>
+            <div class="project-header">
+              <span class="project-tag">SYSTEMS & OS</span>
+              <span class="project-status status-design">● PROTOTYPE 45%</span>
+            </div>
+            <div class="project-icon-box">⚡</div>
+            <h3 class="project-title">ENIGMA MICROKERNEL</h3>
+            <p class="project-summary">
+              Custom x86-64 educational bare-metal microkernel with round-robin preemptive scheduler, virtual memory management, and IPC message passing.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">C</span>
+              <span class="tech-chip">x86-64 ASM</span>
+              <span class="tech-chip">QEMU</span>
+              <span class="tech-chip">Linker Scripts</span>
+            </div>
+            <div class="project-progress-wrapper">
+              <div class="progress-meta">
+                <span>Memory Paging & Interrupts</span>
+                <span>45%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 45%;"></div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="view-blueprint-btn" data-project="enigma-os" data-sound="click">
+                <span>INSPECT BLUEPRINT</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="proj-git-link" title="Source Repo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: TURINGMESH P2P -->
+          <article class="project-card" data-category="systems" data-id="turing-mesh">
+            <div class="card-glass-glow"></div>
+            <div class="project-header">
+              <span class="project-tag">DISTRIBUTED P2P</span>
+              <span class="project-status status-dev">● DEV 78%</span>
+            </div>
+            <div class="project-icon-box">🕸️</div>
+            <h3 class="project-title">TURINGMESH P2P</h3>
+            <p class="project-summary">
+              Decentralized peer-to-peer real-time collaborative coding studio powered by CRDT state synchronizers and WebRTC data channels with zero centralized servers.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">TypeScript</span>
+              <span class="tech-chip">WebRTC</span>
+              <span class="tech-chip">Yjs CRDT</span>
+              <span class="tech-chip">Node.js</span>
+            </div>
+            <div class="project-progress-wrapper">
+              <div class="progress-meta">
+                <span>P2P Swarm Discovery</span>
+                <span>78%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 78%;"></div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="view-blueprint-btn" data-project="turing-mesh" data-sound="click">
+                <span>INSPECT BLUEPRINT</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="proj-git-link" title="Source Repo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: SPECTRA EDGE-AI -->
+          <article class="project-card" data-category="ai" data-id="spectra-ai">
+            <div class="card-glass-glow"></div>
+            <div class="project-header">
+              <span class="project-tag">EDGE COMPUTER VISION</span>
+              <span class="project-status status-concept">● CONCEPT 35%</span>
+            </div>
+            <div class="project-icon-box">👁️</div>
+            <h3 class="project-title">SPECTRA EDGE-AI</h3>
+            <p class="project-summary">
+              Sub-5ms multi-object tracking neural engine optimized with INT8 quantization for resource-constrained robotics and micro-controllers.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">C++20</span>
+              <span class="tech-chip">OpenCV</span>
+              <span class="tech-chip">ONNX</span>
+              <span class="tech-chip">TensorRT</span>
+            </div>
+            <div class="project-progress-wrapper">
+              <div class="progress-meta">
+                <span>Quantization & Benchmark</span>
+                <span>35%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 35%;"></div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="view-blueprint-btn" data-project="spectra-ai" data-sound="click">
+                <span>INSPECT BLUEPRINT</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="proj-git-link" title="Source Repo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: QUANTUM CIPHER VAULT -->
+          <article class="project-card" data-category="systems" data-id="quantum-vault">
+            <div class="card-glass-glow"></div>
+            <div class="project-header">
+              <span class="project-tag">POST-QUANTUM SECURITY</span>
+              <span class="project-status status-dev">● DEV 58%</span>
+            </div>
+            <div class="project-icon-box">🔐</div>
+            <h3 class="project-title">QUANTUM CIPHER VAULT</h3>
+            <p class="project-summary">
+              Lattice-based encryption storage daemon implementing CRYSTALS-Kyber and Dilithium algorithms to withstand future quantum cryptanalysis.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">Go</span>
+              <span class="tech-chip">Kyber-1024</span>
+              <span class="tech-chip">gRPC</span>
+              <span class="tech-chip">SQLite</span>
+            </div>
+            <div class="project-progress-wrapper">
+              <div class="progress-meta">
+                <span>Key Exchange Protocol</span>
+                <span>58%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 58%;"></div>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="view-blueprint-btn" data-project="quantum-vault" data-sound="click">
+                <span>INSPECT BLUEPRINT</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="proj-git-link" title="Source Repo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TURING ENIGMA CODEX SECTION (ABOUT & SKILLS) -->
+    <section id="skills" class="section codex-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-badge">// PHILOSOPHY & CAPABILITIES</div>
+          <h2 class="section-title">THE TURING ENIGMA CODEX</h2>
+          <p class="section-desc">
+            Rooted in the mathematical rigor of Alan Turing's computational theory and propelled by contemporary zero-gravity experimentation.
+          </p>
+        </div>
+
+        <div class="codex-grid">
+          
+          <!-- Manifesto Card -->
+          <div class="glass-subcard manifesto-card">
+            <div class="card-bracket bracket-tl"></div>
+            <div class="card-bracket bracket-tr"></div>
+            <div class="subcard-header">
+              <span class="subcard-icon">⚡</span>
+              <h3>STUDENT PROFILE // TURING ENIGMA</h3>
+            </div>
+            <div class="manifesto-text">
+              <p>
+                As a <strong>B.Tech 1st Year Computer Science student</strong> in the prestigious <strong>TURING ENIGMA</strong> cohort, I delve beyond conventional programming paradigms. My objective is to bridge core hardware engineering with state-of-the-art computational algorithms.
+              </p>
+              <p>
+                Whether calculating gravitational repulsion vectors in zero-gravity particle environments, constructing lightweight OS kernels, or deploying deep learning networks, every line of code is forged with mathematical precision and unwavering performance standards.
+              </p>
+            </div>
+            <div class="student-meta-strip">
+              <div class="meta-item">
+                <span class="m-label">CANDIDATE</span>
+                <span class="m-val">ANIKETBHAI PANARA</span>
+              </div>
+              <div class="meta-item">
+                <span class="m-label">ACADEMIC LEVEL</span>
+                <span class="m-val">B.Tech Year 1</span>
+              </div>
+              <div class="meta-item">
+                <span class="m-label">CORE FOCUS</span>
+                <span class="m-val">AI & Micro-Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Radar / Tech Matrix -->
+          <div class="glass-subcard skills-card">
+            <div class="card-bracket bracket-tl"></div>
+            <div class="card-bracket bracket-tr"></div>
+            <div class="subcard-header">
+              <span class="subcard-icon">📊</span>
+              <h3>CORE TECHNICAL PROFICIENCIES</h3>
+            </div>
+
+            <div class="skill-meter-group">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="skill-name">Data Structures & C/C++ Systems</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="skill-name">Python & Neural Network Architecture</span>
+                  <span class="skill-level">88%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="skill-name">Physics Simulation & 3D WebGL / Canvas</span>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="skill-name">Modern Web, JavaScript (ESNext) & UI</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="skill-name">Git, Linux Kernels & DevOps Toolchains</span>
+                  <span class="skill-level">82%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 82%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tag-cloud">
+              <span class="cyber-tag">Algorithm Analysis</span>
+              <span class="cyber-tag">Zero-G Simulation</span>
+              <span class="cyber-tag">Glassmorphic UI</span>
+              <span class="cyber-tag">PyTorch</span>
+              <span class="cyber-tag">Computer Architecture</span>
+              <span class="cyber-tag">Assembly x86</span>
+              <span class="cyber-tag">P2P Protocols</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL / CONSOLE SECTION -->
+    <section id="terminal-section" class="section terminal-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-badge">// RUNTIME INTERFACE</div>
+          <h2 class="section-title">COMMAND LINE TERMINAL</h2>
+          <p class="section-desc">Direct interface into Aniket's profile environment. Type commands like <code>help</code>, <code>batch</code>, <code>projects</code>, or <code>github</code>.</p>
+        </div>
+
+        <div class="cyber-terminal-card">
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">aniket@turing-enigma:~$ (anti-gravity-sh)</div>
+            <div class="terminal-session">SESSION_01 // SECURE</div>
+          </div>
+          
+          <div class="terminal-body" id="terminal-output">
+            <div class="term-line output-text">Initializing Turing Enigma Kernel v1.0.4...</div>
+            <div class="term-line output-text">Host: ANIKETBHAI PANARA | Zero-Gravity Particle Physics: [ACTIVE]</div>
+            <div class="term-line output-text">Type <span class="term-highlight">'help'</span> to see available runtime commands.</div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">aniket@turing:~$</span>
+            <input type="text" id="terminal-input" class="term-input" placeholder="Type command here (try 'help', 'batch', 'github')..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING ANTI-GRAVITY HUD CONTROLLER -->
+  <aside class="anti-gravity-hud" id="physics-hud">
+    <div class="hud-bar">
+      <div class="hud-item hud-header">
+        <span class="hud-indicator"></span>
+        <span class="hud-label">ZERO-G HUD</span>
+      </div>
+
+      <div class="hud-item hud-fps">
+        <span class="hud-tag">FPS:</span>
+        <span id="fps-counter" class="hud-val">60 FPS</span>
+      </div>
+
+      <div class="hud-divider"></div>
+
+      <!-- Gravity Field Mode Selector -->
+      <div class="hud-item">
+        <span class="hud-tag">FIELD:</span>
+        <select id="gravity-mode-select" class="hud-select" data-sound="click">
+          <option value="zero-g">Zero-G Upward (Default)</option>
+          <option value="black-hole">Black Hole Vortex (Pull)</option>
+          <option value="repulsion-field">High Repulsion Field</option>
+          <option value="supernova">Supernova Drift</option>
+        </select>
+      </div>
+
+      <div class="hud-divider"></div>
+
+      <!-- Theme Selector -->
+      <div class="hud-item">
+        <span class="hud-tag">PALETTE:</span>
+        <select id="theme-select" class="hud-select" data-sound="click">
+          <option value="cyber-neon">Cyber Neon</option>
+          <option value="quantum-cyan">Quantum Cyan</option>
+          <option value="electric-violet">Electric Violet</option>
+          <option value="emerald-matrix">Emerald Matrix</option>
+        </select>
+      </div>
+
+      <div class="hud-divider"></div>
+
+      <!-- Shockwave Trigger -->
+      <button class="hud-btn" id="hud-shockwave-btn" title="Trigger Shockwave" data-sound="click">
+        💥 SHOCKWAVE
+      </button>
+    </div>
+  </aside>
+
+  <!-- INTERACTIVE BLUEPRINT MODAL -->
+  <div class="modal-overlay" id="blueprint-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="glass-modal-card">
+      <div class="card-bracket bracket-tl"></div>
+      <div class="card-bracket bracket-tr"></div>
+      <div class="card-bracket bracket-bl"></div>
+      <div class="card-bracket bracket-br"></div>
+
+      <div class="modal-header">
+        <div class="modal-badge-row">
+          <span class="modal-badge" id="modal-category">SYSTEM BLUEPRINT</span>
+          <span class="modal-status-badge" id="modal-status">ACTIVE</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" data-sound="click">✕</button>
+      </div>
+
+      <h3 class="modal-title" id="modal-title">PROJECT SCHEMATIC</h3>
+      <p class="modal-desc" id="modal-desc">Project technical overview and architectural diagram.</p>
+
+      <div class="modal-spec-columns">
+        <div class="modal-col">
+          <div class="col-title">// ARCHITECTURE HIGHLIGHTS</div>
+          <ul class="modal-features-list" id="modal-features">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+        <div class="modal-col">
+          <div class="col-title">// TECH STACK & PRIMITIVES</div>
+          <div class="modal-tech-box" id="modal-tech-chips">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="modal-benchmarks">
+            <div class="col-title">// PERFORMANCE TARGET</div>
+            <div class="bench-item">
+              <span id="bench-name">Throughput:</span>
+              <span id="bench-val" class="bench-glow">99.98% / &lt;1.2ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary" id="modal-github-link">
+          <span class="btn-inner">
+            <span class="btn-text">VIEW REPOSITORY ON GITHUB</span>
+            <span class="btn-arrow">↗</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">ANIKETBHAI PANARA</div>
+        <p class="footer-sub">B.Tech 1st Year · Turing Enigma Batch · Computer Science & Engineering</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="zero-g-pill">
+          <span class="live-dot"></span>
+          <span>ZERO-G PHYSICS ENGINE RUNNING</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="social-links">
+          <a href="https://github.com/aniketpanara" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">GitHub</a>
+          <span class="sep">/</span>
+          <a href="mailto:aniketpanara@example.com" class="social-link" title="Email">Email</a>
+          <span class="sep">/</span>
+          <a href="#hero" class="social-link" title="Back to Top">Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/physics.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
